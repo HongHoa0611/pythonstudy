@@ -17,7 +17,7 @@ menu_file.add_command(label="ABC")
 menu_file.add_separator()
 menu_file.add_command(label="Exit")
 
-menu_bar.add_cascade(label="Menu", menu=menu_file)
+menu_bar.add_cascade(label="Hệ Thống", menu=menu_file)
 
 
 #Menu phụ
