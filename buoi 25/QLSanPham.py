@@ -23,12 +23,11 @@ menu_bar.add_cascade(label="Hệ Thống", menu=menu_file)
 def doc_du_lieu_san_pham():
     global data_san_pham # dạng global
     try:
-        with open("data_sanpham.json", "r", encoding="utf-8") as myfile:
+        with open("dataSanPham.json", "r", encoding="utf-8") as myfile:
             data_san_pham = json.load(myfile)
     except:
         data_san_pham = []
 
-doc_du_lieu_san_pham()
 
 #gắn menu export:
 def xuat_file_xlxs():
@@ -74,5 +73,8 @@ tv.pack()
 
 # Vùng tác vụ (gồm các button)
 ttk.Button(frame_tac_vu, text="Thêm").pack()
+
+doc_du_lieu_san_pham()
+xuat_file_xlxs()
 
 root.mainloop()
